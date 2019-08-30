@@ -2,6 +2,7 @@ node {
       stage('Preparation')
          { // for display purposes
             git 'https://github.com/Eugene2011/spring-petclinic.git'
+
          }
    stage('Build') {
       // Run the maven build
@@ -11,4 +12,8 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
    }
-   }
+
+   stage('Results') {
+emaitext body: 'Отработал.', subject: 'Отбивка текста', to: 'eugene@ekat.ru'
+  }
+}
