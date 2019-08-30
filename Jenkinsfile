@@ -1,7 +1,7 @@
 node {
   //def mvnHome
   stage(‘Preparation’) {
-     git ’https://github.com/Eugene2011/spring-petclinic.git'
+     git ‘https://github.com/Eugene2011/spring-petclinic.git’
 
   }
   stage(‘Build’) {
