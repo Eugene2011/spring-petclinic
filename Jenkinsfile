@@ -14,6 +14,6 @@ node {
    }
 
    stage('Results') {
-    emailtext body: 'Отработал.', subject: 'Отбивка текста', to: 'eugene@ekat.ru'
+    emailext body: 'Отработал.', subject: 'Отбивка текста', to: 'eugene@ekat.ru'
   }
 }
